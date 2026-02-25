@@ -1,20 +1,140 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--background-color);
+  color: var(--dark-color);
+  font-size: 13px;
+  border-top: 1px solid #d8dde6;
 }
 
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 20px 24px;
 }
 
 footer .footer p {
   margin: 0;
+  line-height: 1.6;
+}
+
+/* General link defaults */
+footer .footer a:any-link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+footer .footer .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .footer .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer .footer-social .icon {
+  width: 16px;
+  height: 16px;
+}
+
+footer .footer .footer-social .icon img {
+  filter: brightness(0) invert(1);
+  width: 16px;
+  height: 16px;
+}
+
+/* Secondary links row: Privacy | Site Map | etc. */
+footer .footer .footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  margin-bottom: 12px;
+}
+
+footer .footer .footer-legal-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* Legal text */
+footer .footer .footer-legal-text {
+  font-size: 11px;
+  color: #767676;
+  line-height: 1.6;
+}
+
+/* Top nav bar inside footer */
+footer .footer .footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d8dde6;
+  margin-bottom: 16px;
+}
+
+footer .footer .footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+footer .footer .footer-nav ul li {
+  display: inline;
+}
+
+footer .footer .footer-nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0 12px;
+  border-right: 1px solid #d8dde6;
+  display: inline-block;
+}
+
+/* Hover states - after all base states */
+footer .footer .footer-social a:hover {
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer .footer-legal-links a:hover {
+  text-decoration: underline;
+}
+
+footer .footer .footer-nav ul li a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Multi-column "Need help" section above footer */
+.section.need-help {
+  background-color: var(--light-color);
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 20px 32px;
   }
 }

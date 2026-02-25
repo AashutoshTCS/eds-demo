@@ -1,6 +1,7 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
 .columns img {
@@ -11,19 +12,54 @@
   order: 1;
 }
 
+/* Small icon above column heading */
+.columns .icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.columns .icon img {
+  width: 32px;
+  height: 32px;
+}
+
 .columns > div > .columns-img-col {
   order: 0;
 }
 
 .columns > div > .columns-img-col img {
   display: block;
+  width: 100%;
+}
+
+/* Plain link lists (tools/resources) */
+.columns ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.columns ul li {
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.columns ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.columns ul li a:hover {
+  text-decoration: underline;
 }
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 40px;
   }
 
   .columns > div > div {
